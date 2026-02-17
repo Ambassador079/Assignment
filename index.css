@@ -4,8 +4,23 @@
     height: 100%;
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
     align-items: center;
-    padding: 5px 20px;
+    padding: 0 16px;
+}
+
+.menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu span {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    display: block;
 }
 
 .fa-envelope {
@@ -38,18 +53,18 @@
 
 .right-div {
     display: flex;
-    align-items: center;
-    gap: 20px;
+    gap: 12px;
 
 }
 
 .login-btn {
-    font-weight: 500;
+    font-weight: bold;
     background-color: transparent;
     border: none;
     color: black;
     width: auto;
     cursor: pointer;
+    padding: 8.4px 0px;
 }
 
 .login-btn:hover {
@@ -108,16 +123,20 @@
 
 .unlimited-card {
     display: flex;
+    flex-direction: row-reverse;
     align-items: center;
+    align-items: center;
+    gap: 30px;
     font-family: Rubik, Helvetica, Arial, sans-serif;
     font-size: 34px;
     margin: 0px 0px 20px;
     padding: 0px 20px;
-
 }
 
-.unlimited-title {
+.text-content {
+    padding: 81px 0px 0px;
     font-family: 34px Rubik, Helvetica, Arial, sans-serif;
+    
 }
 
 .unlimited {
@@ -153,6 +172,7 @@
     color: #fff;
     border-color: 1px solid #0073e6;
 }
+
 
 .why-getresponse {
     text-align: center;
@@ -240,16 +260,19 @@
     color: #fff;
     border-color: 1px solid #0073e6;
 }
+
 .card-right img {
     width: 160px;
     height: 160px;
     border-radius: 50%;
     object-fit: cover;
 }
+
 .footer-text {
     display: flex;
     justify-content: space-between;
 }
+
 .footer-text ul {
     list-style: none;
     font: 14px Rubik, Helvetica, Arial, sans-serif;
@@ -257,6 +280,46 @@
     margin: 0px 0px 20px;
 
 }
-.footer-text li{
+
+.footer-text li {
     margin: 0px 0px 13px;
+}
+
+@media (max-width: 768px) {
+    .login-btn,
+    .demo-btn,
+    .signup-btn,
+    .nav-list, 
+    .web-name {
+        display: none;
+    }
+    .menu {
+        display: flex;
+    }
+    .unlimited-card {
+        flex-direction: column;
+    }
+    .unlimited-card img {
+        width: 100%;
+        max-width: 564px;
+        height: auto;
+        transform: translate(-3px, -7px);
+    }
+    .statistic {
+        flex-direction: column;
+        align-items: center;
+        margin: 17px 0px 20px;
+    }
+    .card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .card-right img {
+        max-width: 100%;
+    }
+    .footer-text {
+        flex-direction: column;
+    }
+
+    }
 }
